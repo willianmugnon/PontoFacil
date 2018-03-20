@@ -11,15 +11,16 @@ import { Perfil } from './../models/perfil';
 })
 export class MyApp {
   @ViewChild(Nav) nav: Nav;
-
   rootPage: any = HomePage;
 
   pages: Array<{title: string, component: any}>;
 
+  public perfil: Perfil = new Perfil() ; 
+
   constructor(public platform: Platform, public statusBar: StatusBar, public splashScreen: SplashScreen) {
     this.initializeApp();
 
-    // used for an example of ngFor and navigation
+    // usado para um exemplo de ngFor e navegação
     this.pages = [
       { title: 'Home', component: HomePage },
     ];
@@ -28,8 +29,8 @@ export class MyApp {
 
   initializeApp() {
     this.platform.ready().then(() => {
-      // Okay, so the platform is ready and our plugins are available.
-      // Here you can do any higher level native things you might need.
+      // Ok, então a plataforma está pronta e os nossos plugins estão disponíveis.
+      // Aqui você pode fazer qualquer coisa nativa de nível superior que você possa precisar.
       this.statusBar.styleDefault();
       this.splashScreen.hide();
     });

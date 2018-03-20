@@ -1,17 +1,12 @@
-<ion-menu [content]="content">
-  <ion-header>
+<ion-menu [content]="content" id="menu-perfil">
+  <ion-header class="cabecalho">
     <ion-toolbar color="primary" class="usuario">
-      <ion-title>Usuário</ion-title>
+      <img src="{{perfil.foto}}" class="imagem" alt="">
     </ion-toolbar>
   </ion-header>
 
-  <ion-content>
-    <ion-list>
-      
-    </ion-list>
-  </ion-content>
 
 </ion-menu>
 
-<!-- Disable swipe-to-go-back because it's poor UX to combine STGB with side menus -->
+<!-- Desativar deslize para voltar, porque é mau UX para combinar STGB com menus laterais -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

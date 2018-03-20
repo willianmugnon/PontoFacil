@@ -1,14 +1,16 @@
 export class Perfil{
     public codigo: number;
-    public nome: String;
+    public nome: string;
     public email: string;
-    public login: String;
-    public senha: String;
-    public celular: String;
-    public cidade: String;
-    public cep:String;
-    public bairro: String;
-    public rua: String;
-    public numero : String;
+    public login: string;
+    public senha: string;
+    public celular: string;
+    public estado: string;
+    public cidade: string;
+    public cep: string;
+    public bairro: string;
+    public rua: string;
+    public numero : string;
+    public foto : string;
 
 }

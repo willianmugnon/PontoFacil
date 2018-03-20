@@ -41,6 +41,15 @@ $colors: (
   light:      #f4f4f4,
   dark:       #222
 );
+//cor do menu perfil
+:root { 
+   --cor-padrao: #00CC66;
+  }
+#menu-perfil{
+  .header-ios .toolbar-background-ios, .footer-ios .toolbar-background-ios{
+    border-style: hidden !important;
+  }
+}
 
 
 // App iOS Variables
