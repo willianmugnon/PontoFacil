@@ -5,6 +5,7 @@ import { SplashScreen } from '@ionic-native/splash-screen';
 
 import { HomePage } from '../pages/home/home';
 import { Perfil } from './../models/perfil';
+import { CadastroPage } from "../pages/perfil/cadastro";
 
 @Component({
   templateUrl: 'app.html'
@@ -35,9 +36,9 @@ export class MyApp {
       this.splashScreen.hide();
     });
   }
-
+//Evendo do click, da imagem para abrir o perfil
   abrirPerfil() {
-    this.nav.setRoot(Perfil);
+    this.nav.push(CadastroPage);
   }
   
 }

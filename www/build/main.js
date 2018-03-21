@@ -88,9 +88,48 @@ var Perfil = (function () {
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CadastroPage; });
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_perfil__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
+    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
+    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
+    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
+    return c > 3 && r && Object.defineProperty(target, key, r), r;
+};
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
+
+
+var CadastroPage = (function () {
+    function CadastroPage() {
+        this.perfil = new __WEBPACK_IMPORTED_MODULE_0__models_perfil__["a" /* Perfil */]();
+    }
+    CadastroPage.prototype.salvar = function (perfilSalvar) {
+        console.log(perfilSalvar);
+    };
+    CadastroPage = __decorate([
+        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
+            selector: 'cadastro-page',template:/*ion-inline-start:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\pages\perfil\cadastro.html"*/'<ion-header>\n\n    <ion-navbar color="primary">\n\n        <ion-title>\n\n            Perfil\n\n        </ion-title>\n\n<ion-buttons end>\n\n    <button ion-button icon-only (click)="salvar(perfil)">\n\n    <ion-icon name="checkmark"></ion-icon>\n\n    </button>    \n\n</ion-buttons>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-list>\n\n        <ion-item>\n\n            <ion-label floating>Código</ion-label>\n\n            <ion-input type="text" [(ngModel)]="perfil.codigo"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Nome</ion-label>\n\n            <ion-input type="text" [(ngModel)]="perfil.nome"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Email</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.email"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Login</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.login"></ion-input>\n\n        </ion-item>\n\n\n\n         <ion-item>\n\n            <ion-label floating>Senha</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.senha"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Celular</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.celular"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Cidade</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.cidade"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Cep</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.cep"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Bairro</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.bairro"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Rua</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.rua"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Número</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.numero"></ion-input>\n\n        </ion-item>\n\n\n\n    </ion-list>\n\n\n\n</ion-content>'/*ion-inline-end:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\pages\perfil\cadastro.html"*/
+            // styleUrls: ['cadastro.scss']
+        }),
+        __metadata("design:paramtypes", [])
+    ], CadastroPage);
+    return CadastroPage;
+}());
+
+//# sourceMappingURL=cadastro.js.map
+
+/***/ }),
+
+/***/ 197:
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(197);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(220);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(198);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(221);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -98,7 +137,7 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 220:
+/***/ 221:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -106,9 +145,9 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(29);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(263);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(264);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(194);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_perfil_cadastro__ = __webpack_require__(272);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_perfil_cadastro__ = __webpack_require__(196);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__ = __webpack_require__(190);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__ = __webpack_require__(193);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
@@ -133,7 +172,7 @@ var AppModule = (function () {
             declarations: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_5__pages_perfil_cadastro__["a" /* Cadastro */]
+                __WEBPACK_IMPORTED_MODULE_5__pages_perfil_cadastro__["a" /* CadastroPage */]
             ],
             imports: [
                 __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__["a" /* BrowserModule */],
@@ -145,7 +184,7 @@ var AppModule = (function () {
             entryComponents: [
                 __WEBPACK_IMPORTED_MODULE_3__app_component__["a" /* MyApp */],
                 __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */],
-                __WEBPACK_IMPORTED_MODULE_5__pages_perfil_cadastro__["a" /* Cadastro */]
+                __WEBPACK_IMPORTED_MODULE_5__pages_perfil_cadastro__["a" /* CadastroPage */]
             ],
             providers: [
                 __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__["a" /* StatusBar */],
@@ -161,7 +200,7 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 263:
+/***/ 264:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
@@ -172,6 +211,7 @@ var AppModule = (function () {
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_perfil__ = __webpack_require__(195);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__pages_perfil_cadastro__ = __webpack_require__(196);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -181,6 +221,7 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 var __metadata = (this && this.__metadata) || function (k, v) {
     if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
 };
+
 
 
 
@@ -209,63 +250,26 @@ var MyApp = (function () {
             _this.splashScreen.hide();
         });
     };
+    //Evendo do click, da imagem para abrir o perfil
     MyApp.prototype.abrirPerfil = function () {
-        this.nav.setRoot(__WEBPACK_IMPORTED_MODULE_5__models_perfil__["a" /* Perfil */]);
+        this.nav.push(__WEBPACK_IMPORTED_MODULE_6__pages_perfil_cadastro__["a" /* CadastroPage */]);
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Nav */]),
-        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Nav */])
+        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Nav */]) === "function" && _a || Object)
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\app\app.html"*/'<ion-menu [content]="content" id="menu-perfil">\n\n  <ion-header class="cabecalho">\n\n    <ion-toolbar color="primary" class="usuario">\n\n      <img src="{{perfil.foto}}" class="imagem" alt="">\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n\n\n</ion-menu>\n\n\n\n<!-- Desativar deslize para voltar, porque é mau UX para combinar STGB com menus laterais -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\app\app.html"*/'<ion-menu [content]="content" id="menu-perfil">\n\n  <ion-header class="cabecalho">\n\n    <ion-toolbar color="primary" class="usuario">\n\n      <img src="{{perfil.foto}}" class="imagem" alt="">\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n\n\n\n\n\n\n</ion-menu>\n\n<!-- Desativar deslize para voltar, porque é mau UX para combinar STGB com menus laterais -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\app\app.html"*/
         }),
-        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
+        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object])
     ], MyApp);
     return MyApp;
+    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=app.component.js.map
 
-/***/ }),
-
-/***/ 272:
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Cadastro; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_perfil__ = __webpack_require__(195);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
-var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
-    var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
-    if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
-    else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
-    return c > 3 && r && Object.defineProperty(target, key, r), r;
-};
-var __metadata = (this && this.__metadata) || function (k, v) {
-    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
-};
-
-
-var Cadastro = (function () {
-    function Cadastro() {
-        this.perfil = new __WEBPACK_IMPORTED_MODULE_0__models_perfil__["a" /* Perfil */]();
-    }
-    Cadastro.prototype.salvar = function (perfilSalvar) {
-        console.log(perfilSalvar);
-    };
-    Cadastro = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'cadastro-page',template:/*ion-inline-start:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\pages\perfil\cadastro.html"*/'<ion-header>\n\n    <ion-navbar>\n\n        <ion-title>\n\n            Perfil\n\n        </ion-title>\n\n<ion-buttons end>\n\n    <button ion-button icon-only (click)="salvar(perfil)">\n\n    <ion-icon name="checkmark"></ion-icon>\n\n    </button>    \n\n</ion-buttons>\n\n    </ion-navbar>\n\n</ion-header>\n\n\n\n\n\n<ion-content padding>\n\n\n\n    <ion-list>\n\n        <ion-item>\n\n            <ion-label floating>Código</ion-label>\n\n            <ion-input type="text" [(ngModel)]="perfil.codigo"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Nome</ion-label>\n\n            <ion-input type="text" [(ngModel)]="perfil.nome"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Email</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.email"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Login</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.login"></ion-input>\n\n        </ion-item>\n\n\n\n         <ion-item>\n\n            <ion-label floating>Senha</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.senha"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Celular</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.celular"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Cidade</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.cidade"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Cep</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.cep"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Bairro</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.bairro"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Rua</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.rua"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Número</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.numero"></ion-input>\n\n        </ion-item>\n\n\n\n    </ion-list>\n\n\n\n</ion-content>'/*ion-inline-end:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\pages\perfil\cadastro.html"*/
-            // styleUrls: ['cadastro.scss']
-        }),
-        __metadata("design:paramtypes", [])
-    ], Cadastro);
-    return Cadastro;
-}());
-
-//# sourceMappingURL=cadastro.js.map
-
 /***/ })
 
-},[196]);
+},[197]);
 //# sourceMappingURL=main.js.map
