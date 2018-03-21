@@ -25692,6 +25692,21 @@ ion-navbar.toolbar {
   background-color: var(--cor-padrao);
 }
 
+.cabecalho .imagem {
+  margin-top: 30px;
+  margin-bottom: 10px;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin-left: calc(50% - 75px);
+}
+
+.cabecalho .text {
+  text-align: center;
+  margin: 10px;
+  color: white;
+}
+
 page-home .bar-button-default-ios {
   color: #000000;
 }
