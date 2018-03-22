@@ -1,7 +1,9 @@
 <ion-menu [content]="content" id="menu-perfil">
   <ion-header class="cabecalho">
     <ion-toolbar color="primary" class="usuario">
-      <img src="{{perfil.foto}}" class="imagem" alt="">
+      <img src="{{perfil.foto}}" class="imagem" (click)="abrirPerfil()">
+      <div class="text">Ponto Fácil</div>
+      <div class="text">Willian_mugnon@hotmail.com</div>
     </ion-toolbar>
   </ion-header>
 

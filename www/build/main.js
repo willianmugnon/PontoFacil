@@ -256,15 +256,14 @@ var MyApp = (function () {
     };
     __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["_8" /* ViewChild */])(__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Nav */]),
-        __metadata("design:type", typeof (_a = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Nav */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Nav */]) === "function" && _a || Object)
+        __metadata("design:type", __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["d" /* Nav */])
     ], MyApp.prototype, "nav", void 0);
     MyApp = __decorate([
-        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\app\app.html"*/'<ion-menu [content]="content" id="menu-perfil">\n\n  <ion-header class="cabecalho">\n\n    <ion-toolbar color="primary" class="usuario">\n\n      <img src="{{perfil.foto}}" class="imagem" alt="">\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n\n\n\n\n\n\n</ion-menu>\n\n<!-- Desativar deslize para voltar, porque é mau UX para combinar STGB com menus laterais -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\app\app.html"*/
+        Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({template:/*ion-inline-start:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\app\app.html"*/'<ion-menu [content]="content" id="menu-perfil">\n\n  <ion-header class="cabecalho">\n\n    <ion-toolbar color="primary" class="usuario">\n\n      <img src="{{perfil.foto}}" class="imagem" (click)="abrirPerfil()">\n\n      <div class="text">Ponto Fácil</div>\n\n      <div class="text">Willian_mugnon@hotmail.com</div>\n\n    </ion-toolbar>\n\n  </ion-header>\n\n\n\n\n\n\n\n\n\n</ion-menu>\n\n<!-- Desativar deslize para voltar, porque é mau UX para combinar STGB com menus laterais -->\n\n<ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>'/*ion-inline-end:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\app\app.html"*/
         }),
-        __metadata("design:paramtypes", [typeof (_b = typeof __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */]) === "function" && _b || Object, typeof (_c = typeof __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */]) === "function" && _c || Object, typeof (_d = typeof __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */] !== "undefined" && __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]) === "function" && _d || Object])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["f" /* Platform */], __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__["a" /* StatusBar */], __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__["a" /* SplashScreen */]])
     ], MyApp);
     return MyApp;
-    var _a, _b, _c, _d;
 }());
 
 //# sourceMappingURL=app.component.js.map
