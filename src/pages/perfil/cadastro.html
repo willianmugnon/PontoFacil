@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar color="primary">
         <ion-title>
-            Perfil
+           Meu Perfil
         </ion-title>
 <ion-buttons end>
     <button ion-button icon-only (click)="salvar(perfil)">
@@ -14,6 +14,8 @@
 
 
 <ion-content padding>
+<div ><img src="{{perfil.foto}}" class="img" (click)="opcoes()"alt=""></div>
+
     <ion-list>
         <ion-item>
             <ion-label floating>Código</ion-label>

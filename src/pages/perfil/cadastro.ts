@@ -1,5 +1,8 @@
 import { Perfil } from './../../models/perfil';
 import { Component } from '@angular/core';
+import { Camera, CameraOptions } from '@ionic-native/camera';
+import { NavController } from 'ionic-angular/navigation/nav-controller';
+import { ActionSheetController } from 'ionic-angular/components/action-sheet/action-sheet-controller';
 @Component({
 
     selector:'cadastro-page',
@@ -12,7 +15,7 @@ export class CadastroPage{
 
     public perfil: Perfil;
 
-   constructor(){
+   constructor(private camera : Camera, private nav : NavController, private action: ActionSheetController){
    this.perfil= new Perfil();
 
    }
@@ -20,6 +23,54 @@ export class CadastroPage{
 
 salvar(perfilSalvar : Perfil){
     console.log(perfilSalvar);
+}
+
+public opcoes(){
+    this.action.create({
+        title: 'Escolha uma opção', 
+        buttons:[
+            {
+                text:'Camera', icon:'camera',handler:() => {
+
+                    const options: CameraOptions = {
+                        quality: 100,
+                        destinationType: this.camera.DestinationType.DATA_URL,
+                        encodingType: this.camera.EncodingType.JPEG,
+                        mediaType: this.camera.MediaType.PICTURE,
+                        sourceType: this.camera.PictureSourceType.CAMERA
+                      }
+                      
+                      this.camera.getPicture(options).then((imageData) => {
+                      
+                       this.perfil.foto = 'data:image/jpeg;base64,' + imageData;
+                      }, (err) => {
+                       // Handle error
+                      });
+
+                }
+
+            },
+            {
+                text:'Galeria', icon:'photo',handler:() => {
+                    const options: CameraOptions = {
+                        quality: 100,
+                        destinationType: this.camera.DestinationType.DATA_URL,
+                        encodingType: this.camera.EncodingType.JPEG,
+                        mediaType: this.camera.MediaType.PICTURE,
+                        sourceType: this.camera.PictureSourceType.SAVEDPHOTOALBUM
+                      }
+                      
+                      this.camera.getPicture(options).then((imageData) => {
+                      
+                       this.perfil.foto = 'data:image/jpeg;base64,' + imageData;
+                      }, (err) => {
+                       // Handle error
+                      });
+                }
+
+            }
+        ] 
+    })
 }
 
 }
