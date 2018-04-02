@@ -1,4 +1,5 @@
 {
+<<<<<<< HEAD
   "prepare_queue": {
     "installed": [],
     "uninstalled": []
@@ -27,4 +28,34 @@
     }
   },
   "dependent_plugins": {}
+=======
+    "prepare_queue": {
+        "installed": [],
+        "uninstalled": []
+    },
+    "config_munge": {
+        "files": {}
+    },
+    "installed_plugins": {
+        "cordova-plugin-whitelist": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-device": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-splashscreen": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-ionic-webview": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-ionic-keyboard": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        },
+        "cordova-plugin-camera": {
+            "PACKAGE_NAME": "io.ionic.starter"
+        }
+    },
+    "dependent_plugins": {}
+>>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
 }

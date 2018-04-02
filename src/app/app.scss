@@ -1,9 +1,9 @@
-.cabecalho {
+.cabecalho {//Quadro onde fica a foto do usuario
     position: absolute;
     height: 25%;
     background-color: var( --cor-padrao);
 
-    .imagem{
+    .imagem{// Css que faz com que a imagem fique circular, e ajustada no circulo
         margin-top: 30px;
         margin-bottom: 10px;
         border-radius: 50%;
@@ -14,7 +14,7 @@
 
     }
     
-    .text{
+    .text{//Onde ajusto o nome e email do usuario no cabecalho
         text-align: center;
         margin: 10px;
         color:white;

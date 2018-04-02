@@ -1,4 +1,10 @@
 /*
+<<<<<<< HEAD
+=======
+ *
+ * Copyright 2013 Anis Kadri
+ *
+>>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
  * Licensed under the Apache License, Version 2.0 (the "License");
  * you may not use this file except in compliance with the License.
  * You may obtain a copy of the License at
@@ -30,6 +36,7 @@ var handlers = {
 
             var dest = path.join(obj.targetDir, path.basename(obj.src));
 
+<<<<<<< HEAD
             // TODO: This code needs to be replaced, since the core plugins need to be re-mapped to a different location in
             // a later plugins release.  This is for legacy plugins to work with Cordova.
 
@@ -43,6 +50,10 @@ var handlers = {
                         dest = path.join('app/src/main', obj.targetDir, path.basename(obj.src));
                     }
                 }
+=======
+            if (options && options.android_studio === true) {
+                dest = path.join('app/src/main/java', obj.targetDir.substring(4), path.basename(obj.src));
+>>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
             }
 
             if (options && options.force) {
@@ -79,6 +90,7 @@ var handlers = {
     },
     'resource-file': {
         install: function (obj, plugin, project, options) {
+<<<<<<< HEAD
             var dest = path.normalize(obj.target);
             if (options && options.android_studio === true) {
                 dest = path.join('app/src/main', dest);
@@ -91,6 +103,12 @@ var handlers = {
                 dest = path.join('app/src/main', dest);
             }
             removeFile(project.projectDir, dest);
+=======
+            copyFile(plugin.dir, obj.src, project.projectDir, path.normalize(obj.target), !!(options && options.link));
+        },
+        uninstall: function (obj, plugin, project, options) {
+            removeFile(project.projectDir, path.normalize(obj.target));
+>>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
         }
     },
     'framework': {

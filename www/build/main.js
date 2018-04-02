@@ -1,6 +1,6 @@
 webpackJsonp([0],{
 
-/***/ 109:
+/***/ 111:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -13,11 +13,11 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 109;
+webpackEmptyAsyncContext.id = 111;
 
 /***/ }),
 
-/***/ 150:
+/***/ 151:
 /***/ (function(module, exports) {
 
 function webpackEmptyAsyncContext(req) {
@@ -30,7 +30,7 @@ function webpackEmptyAsyncContext(req) {
 webpackEmptyAsyncContext.keys = function() { return []; };
 webpackEmptyAsyncContext.resolve = webpackEmptyAsyncContext;
 module.exports = webpackEmptyAsyncContext;
-webpackEmptyAsyncContext.id = 150;
+webpackEmptyAsyncContext.id = 151;
 
 /***/ }),
 
@@ -52,13 +52,13 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var HomePage = (function () {
+var HomePage = /** @class */ (function () {
     function HomePage(navCtrl) {
         this.navCtrl = navCtrl;
     }
     HomePage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_0__angular_core__["m" /* Component */])({
-            selector: 'page-home',template:/*ion-inline-start:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Ponto Fácil</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <p>   \n    Acesse sua <a href="https://www.google.com.br/maps/dir//R.+Papa+Jo%C3%A3o+XXIII,+1230+-+S%C3%A3o+Crist%C3%B3v%C3%A3o,+Pato+Branco+-+PR,+85508-030/@-26.2634842,-52.6932991,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x94e54d59beec918d:0x807318f7951d5772!2m2!1d-52.6905256!2d-26.2633687!3e0">Localização</a>.\n  </p>\n</ion-content>\n'/*ion-inline-end:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\pages\home\home.html"*/
+            selector: 'page-home',template:/*ion-inline-start:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\pages\home\home.html"*/'<ion-header>\n  <ion-navbar color="primary">\n    <button ion-button menuToggle>\n      <ion-icon name="menu"></ion-icon>\n    </button>\n    <ion-title>Ponto Fácil</ion-title>\n  </ion-navbar>\n</ion-header>\n\n<ion-content padding>\n\n  <p>   \n    Acesse sua <a href="https://www.google.com.br/maps/dir//R.+Papa+Jo%C3%A3o+XXIII,+1230+-+S%C3%A3o+Crist%C3%B3v%C3%A3o,+Pato+Branco+-+PR,+85508-030/@-26.2634842,-52.6932991,17z/data=!4m9!4m8!1m0!1m5!1m1!1s0x94e54d59beec918d:0x807318f7951d5772!2m2!1d-52.6905256!2d-26.2633687!3e0">Localização</a>.\n  </p>\n</ion-content>'/*ion-inline-end:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\pages\home\home.html"*/
         }),
         __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_1_ionic_angular__["e" /* NavController */]])
     ], HomePage);
@@ -74,7 +74,7 @@ var HomePage = (function () {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return Perfil; });
-var Perfil = (function () {
+var Perfil = /** @class */ (function () {
     function Perfil() {
     }
     return Perfil;
@@ -91,6 +91,9 @@ var Perfil = (function () {
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return CadastroPage; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__models_perfil__ = __webpack_require__(195);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__ = __webpack_require__(197);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3_ionic_angular_navigation_nav_controller__ = __webpack_require__(18);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_action_sheet_action_sheet_controller__ = __webpack_require__(59);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -102,19 +105,64 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 };
 
 
-var CadastroPage = (function () {
-    function CadastroPage() {
+
+
+
+var CadastroPage = /** @class */ (function () {
+    function CadastroPage(camera, nav, action) {
+        this.camera = camera;
+        this.nav = nav;
+        this.action = action;
         this.perfil = new __WEBPACK_IMPORTED_MODULE_0__models_perfil__["a" /* Perfil */]();
     }
     CadastroPage.prototype.salvar = function (perfilSalvar) {
         console.log(perfilSalvar);
     };
+    //Metodo que faço as configurações aparecerem ao clicar na imagem para abrir a camera
+    CadastroPage.prototype.opcoes = function () {
+        var _this = this;
+        this.action.create({
+            title: 'Escolha Uma Opção',
+            buttons: [
+                {
+                    text: 'Camera', icon: 'camera', handler: function () {
+                        var options = {
+                            quality: 100,
+                            destinationType: _this.camera.DestinationType.DATA_URL,
+                            encodingType: _this.camera.EncodingType.JPEG,
+                            mediaType: _this.camera.MediaType.PICTURE,
+                            sourceType: _this.camera.PictureSourceType.CAMERA
+                        };
+                        _this.camera.getPicture(options).then(function (imageData) {
+                            _this.perfil.foto = 'data:image/jpeg;base64,' + imageData;
+                        }, function (err) {
+                            // Handle error
+                        });
+                    }
+                },
+                {
+                    text: 'Galeria', icon: 'photo', handler: function () {
+                        var options = {
+                            quality: 100,
+                            destinationType: _this.camera.DestinationType.DATA_URL,
+                            encodingType: _this.camera.EncodingType.JPEG,
+                            mediaType: _this.camera.MediaType.PICTURE,
+                            sourceType: _this.camera.PictureSourceType.SAVEDPHOTOALBUM
+                        };
+                        _this.camera.getPicture(options).then(function (imageData) {
+                            _this.perfil.foto = 'data:image/jpeg;base64,' + imageData;
+                        }, function (err) {
+                        });
+                    }
+                }
+            ]
+        });
+    };
     CadastroPage = __decorate([
         Object(__WEBPACK_IMPORTED_MODULE_1__angular_core__["m" /* Component */])({
-            selector: 'cadastro-page',template:/*ion-inline-start:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\pages\perfil\cadastro.html"*/'<ion-header>\n\n    <ion-navbar color="primary">\n\n        <ion-title>\n\n            Perfil\n\n        </ion-title>\n\n<ion-buttons end>\n\n    <button ion-button icon-only (click)="salvar(perfil)">\n\n    <ion-icon name="checkmark"></ion-icon>\n\n    </button>    \n\n</ion-buttons>\n\n    </ion-navbar>\n\n</ion-header>  \n\n\n\n\n\n\n\n<ion-content padding>\n\n    <ion-list>\n\n        <ion-item>\n\n            <ion-label floating>Código</ion-label>\n\n            <ion-input type="text" [(ngModel)]="perfil.codigo"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Nome</ion-label>\n\n            <ion-input type="text" [(ngModel)]="perfil.nome"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Email</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.email"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Login</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.login"></ion-input>\n\n        </ion-item>\n\n\n\n         <ion-item>\n\n            <ion-label floating>Senha</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.senha"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Celular</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.celular"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Cidade</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.cidade"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Cep</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.cep"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Bairro</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.bairro"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Rua</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.rua"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Número</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.numero"></ion-input>\n\n        </ion-item>\n\n\n\n    </ion-list>\n\n\n\n</ion-content>'/*ion-inline-end:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\pages\perfil\cadastro.html"*/
-            // styleUrls: ['cadastro.scss']
+            selector: 'cadastro-page',template:/*ion-inline-start:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\pages\perfil\cadastro.html"*/'<ion-header>\n\n    <ion-navbar color="primary">\n\n        <ion-title>\n\n           Meu Perfil\n\n        </ion-title>\n\n<ion-buttons end>\n\n    <button ion-button icon-only (click)="salvar(perfil)">\n\n    <ion-icon name="checkmark"></ion-icon>\n\n    </button>    \n\n</ion-buttons>\n\n    </ion-navbar>\n\n</ion-header>  \n\n\n\n\n\n\n\n<ion-content padding>\n\n<div ><img src="{{perfil.foto}}" class="img" (click)="opcoes()"alt=""></div>\n\n\n\n    <ion-list>\n\n        <ion-item>\n\n            <ion-label floating>Código</ion-label>\n\n            <ion-input type="text" [(ngModel)]="perfil.codigo" disable="true"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Nome</ion-label>\n\n            <ion-input type="text" [(ngModel)]="perfil.nome"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>E-mail</ion-label>\n\n            <ion-input type="email"[(ngModel)]="perfil.email"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Login</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.login"></ion-input>\n\n        </ion-item>\n\n\n\n         <ion-item>\n\n            <ion-label floating>Senha</ion-label>\n\n            <ion-input type="password"[(ngModel)]="perfil.senha"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Celular</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.celular"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Cidade</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.cidade"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Cep</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.cep"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Bairro</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.bairro"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Rua</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.rua"></ion-input>\n\n        </ion-item>\n\n\n\n        <ion-item>\n\n            <ion-label floating>Número</ion-label>\n\n            <ion-input type="text"[(ngModel)]="perfil.numero"></ion-input>\n\n        </ion-item>\n\n\n\n    </ion-list>\n\n\n\n</ion-content>'/*ion-inline-end:"D:\FADEP - 5º Periodo\ComputacaoMovel\tcc\src\pages\perfil\cadastro.html"*/
         }),
-        __metadata("design:paramtypes", [])
+        __metadata("design:paramtypes", [__WEBPACK_IMPORTED_MODULE_2__ionic_native_camera__["a" /* Camera */], __WEBPACK_IMPORTED_MODULE_3_ionic_angular_navigation_nav_controller__["a" /* NavController */], __WEBPACK_IMPORTED_MODULE_4_ionic_angular_components_action_sheet_action_sheet_controller__["a" /* ActionSheetController */]])
     ], CadastroPage);
     return CadastroPage;
 }());
@@ -123,13 +171,13 @@ var CadastroPage = (function () {
 
 /***/ }),
 
-/***/ 197:
+/***/ 198:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 Object.defineProperty(__webpack_exports__, "__esModule", { value: true });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(198);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(221);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__ = __webpack_require__(199);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__app_module__ = __webpack_require__(222);
 
 
 Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* platformBrowserDynamic */])().bootstrapModule(__WEBPACK_IMPORTED_MODULE_1__app_module__["a" /* AppModule */]);
@@ -137,19 +185,20 @@ Object(__WEBPACK_IMPORTED_MODULE_0__angular_platform_browser_dynamic__["a" /* pl
 
 /***/ }),
 
-/***/ 221:
+/***/ 222:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return AppModule; });
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(29);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_platform_browser__ = __webpack_require__(30);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_2_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(264);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__app_component__ = __webpack_require__(265);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__pages_perfil_cadastro__ = __webpack_require__(196);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__ = __webpack_require__(193);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_8__ionic_native_camera__ = __webpack_require__(197);
 var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
     var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
     if (typeof Reflect === "object" && typeof Reflect.decorate === "function") r = Reflect.decorate(decorators, target, key, desc);
@@ -164,7 +213,8 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
 
 
 
-var AppModule = (function () {
+
+var AppModule = /** @class */ (function () {
     function AppModule() {
     }
     AppModule = __decorate([
@@ -189,6 +239,7 @@ var AppModule = (function () {
             providers: [
                 __WEBPACK_IMPORTED_MODULE_6__ionic_native_status_bar__["a" /* StatusBar */],
                 __WEBPACK_IMPORTED_MODULE_7__ionic_native_splash_screen__["a" /* SplashScreen */],
+                __WEBPACK_IMPORTED_MODULE_8__ionic_native_camera__["a" /* Camera */],
                 { provide: __WEBPACK_IMPORTED_MODULE_1__angular_core__["u" /* ErrorHandler */], useClass: __WEBPACK_IMPORTED_MODULE_2_ionic_angular__["b" /* IonicErrorHandler */] }
             ]
         })
@@ -200,14 +251,14 @@ var AppModule = (function () {
 
 /***/ }),
 
-/***/ 264:
+/***/ 265:
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 /* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "a", function() { return MyApp; });
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_0__angular_core__ = __webpack_require__(0);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_1_ionic_angular__ = __webpack_require__(54);
-/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(190);
+/* harmony import */ var __WEBPACK_IMPORTED_MODULE_2__ionic_native_status_bar__ = __webpack_require__(191);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_3__ionic_native_splash_screen__ = __webpack_require__(193);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_4__pages_home_home__ = __webpack_require__(194);
 /* harmony import */ var __WEBPACK_IMPORTED_MODULE_5__models_perfil__ = __webpack_require__(195);
@@ -228,28 +279,14 @@ var __metadata = (this && this.__metadata) || function (k, v) {
 
 
 
-var MyApp = (function () {
+var MyApp = /** @class */ (function () {
     function MyApp(platform, statusBar, splashScreen) {
         this.platform = platform;
         this.statusBar = statusBar;
         this.splashScreen = splashScreen;
         this.rootPage = __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */];
         this.perfil = new __WEBPACK_IMPORTED_MODULE_5__models_perfil__["a" /* Perfil */]();
-        this.initializeApp();
-        // usado para um exemplo de ngFor e navegação
-        this.pages = [
-            { title: 'Home', component: __WEBPACK_IMPORTED_MODULE_4__pages_home_home__["a" /* HomePage */] },
-        ];
     }
-    MyApp.prototype.initializeApp = function () {
-        var _this = this;
-        this.platform.ready().then(function () {
-            // Ok, então a plataforma está pronta e os nossos plugins estão disponíveis.
-            // Aqui você pode fazer qualquer coisa nativa de nível superior que você possa precisar.
-            _this.statusBar.styleDefault();
-            _this.splashScreen.hide();
-        });
-    };
     //Evendo do click, da imagem para abrir o perfil
     MyApp.prototype.abrirPerfil = function () {
         this.nav.push(__WEBPACK_IMPORTED_MODULE_6__pages_perfil_cadastro__["a" /* CadastroPage */]);
@@ -270,5 +307,5 @@ var MyApp = (function () {
 
 /***/ })
 
-},[197]);
+},[198]);
 //# sourceMappingURL=main.js.map

@@ -20,8 +20,13 @@
 var CordovaError = require('cordova-common').CordovaError;
 
 var knownBuilders = {
+<<<<<<< HEAD
     gradle: 'GradleBuilder',
     studio: 'StudioBuilder',
+=======
+    ant: 'AntBuilder',
+    gradle: 'GradleBuilder',
+>>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
     none: 'GenericBuilder'
 };
 

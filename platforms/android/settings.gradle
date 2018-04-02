@@ -1,4 +1,7 @@
 // GENERATED FILE - DO NOT EDIT
 include ":"
 include ":CordovaLib"
+<<<<<<< HEAD
 include ":app"
+=======
+>>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626

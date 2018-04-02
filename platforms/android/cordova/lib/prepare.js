@@ -199,8 +199,12 @@ function updateProjectAccordingTo (platformConfig, locations) {
         .setTargetSdkVersion(platformConfig.getPreference('android-targetSdkVersion', 'android'))
         .write();
 
+<<<<<<< HEAD
     // Java file paths shouldn't be hard coded
     var javaPattern = path.join(locations.javaSrc, manifestId.replace(/\./g, '/'), '*.java');
+=======
+    var javaPattern = path.join(locations.root, 'src', manifestId.replace(/\./g, '/'), '*.java');
+>>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
     var java_files = shell.ls(javaPattern).filter(function (f) {
         return shell.grep(/extends\s+CordovaActivity/g, f);
     });
@@ -211,7 +215,11 @@ function updateProjectAccordingTo (platformConfig, locations) {
         events.emit('log', 'Multiple candidate Java files that extend CordovaActivity found. Guessing at the first one, ' + java_files[0]);
     }
 
+<<<<<<< HEAD
     var destFile = path.join(locations.root, 'app', 'src', 'main', 'java', androidPkgName.replace(/\./g, '/'), path.basename(java_files[0]));
+=======
+    var destFile = path.join(locations.root, 'src', androidPkgName.replace(/\./g, '/'), path.basename(java_files[0]));
+>>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
     shell.mkdir('-p', path.dirname(destFile));
     shell.sed(/package [\w\.]*;/, 'package ' + androidPkgName + ';', java_files[0]).to(destFile);
     events.emit('verbose', 'Wrote out Android package name "' + androidPkgName + '" to ' + destFile);

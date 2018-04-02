@@ -29,11 +29,15 @@ String doEnsureValueExists(filePath, props, key) {
 
 String doGetProjectTarget() {
     def props = new Properties()
+<<<<<<< HEAD
     def propertiesFile = 'project.properties';
     if(!(file(propertiesFile).exists())) {
       propertiesFile = '../project.properties';
     }
     file(propertiesFile).withReader { reader ->
+=======
+    file('project.properties').withReader { reader ->
+>>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
         props.load(reader)
     }
     return doEnsureValueExists('project.properties', props, 'target')

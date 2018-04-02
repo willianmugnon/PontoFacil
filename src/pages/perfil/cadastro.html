@@ -1,7 +1,7 @@
 <ion-header>
     <ion-navbar color="primary">
         <ion-title>
-            Perfil
+           Meu Perfil
         </ion-title>
 <ion-buttons end>
     <button ion-button icon-only (click)="salvar(perfil)">
@@ -14,10 +14,12 @@
 
 
 <ion-content padding>
+<div ><img src="{{perfil.foto}}" class="img" (click)="opcoes()"alt=""></div>
+
     <ion-list>
         <ion-item>
             <ion-label floating>Código</ion-label>
-            <ion-input type="text" [(ngModel)]="perfil.codigo"></ion-input>
+            <ion-input type="text" [(ngModel)]="perfil.codigo" disable="true"></ion-input>
         </ion-item>
 
         <ion-item>
@@ -26,8 +28,8 @@
         </ion-item>
 
         <ion-item>
-            <ion-label floating>Email</ion-label>
-            <ion-input type="text"[(ngModel)]="perfil.email"></ion-input>
+            <ion-label floating>E-mail</ion-label>
+            <ion-input type="email"[(ngModel)]="perfil.email"></ion-input>
         </ion-item>
 
         <ion-item>
@@ -37,7 +39,7 @@
 
          <ion-item>
             <ion-label floating>Senha</ion-label>
-            <ion-input type="text"[(ngModel)]="perfil.senha"></ion-input>
+            <ion-input type="password"[(ngModel)]="perfil.senha"></ion-input>
         </ion-item>
 
         <ion-item>

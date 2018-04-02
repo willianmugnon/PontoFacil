@@ -11,8 +11,13 @@ var fs = require('fs');
 var CordovaError = require('cordova-common').CordovaError;
 
 module.exports.isAndroidStudioProject = function isAndroidStudioProject (root) {
+<<<<<<< HEAD
     var eclipseFiles = ['AndroidManifest.xml', 'libs', 'res'];
     var androidStudioFiles = ['app', 'app/src/main'];
+=======
+    var eclipseFiles = ['AndroidManifest.xml', 'libs', 'res', 'project.properties', 'platform_www'];
+    var androidStudioFiles = ['app', 'gradle', 'app/src/main/res'];
+>>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
 
     // assume it is an AS project and not an Eclipse project
     var isEclipse = false;
