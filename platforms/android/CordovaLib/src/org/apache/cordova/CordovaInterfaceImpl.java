@@ -19,13 +19,7 @@
 
 package org.apache.cordova;
 
-<<<<<<< HEAD
-import android.annotation.SuppressLint;
 import android.app.Activity;
-import android.content.Context;
-=======
-import android.app.Activity;
->>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.Build;
@@ -91,14 +85,6 @@ public class CordovaInterfaceImpl implements CordovaInterface {
     }
 
     @Override
-<<<<<<< HEAD
-    public Context getContext() {
-        return activity;
-    }
-
-    @Override
-=======
->>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
     public Object onMessage(String id, Object data) {
         if ("exit".equals(id)) {
             activity.finish();
@@ -235,10 +221,6 @@ public class CordovaInterfaceImpl implements CordovaInterface {
         requestPermissions(plugin, requestCode, permissions);
     }
 
-<<<<<<< HEAD
-        @SuppressLint("NewApi")
-=======
->>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
     public void requestPermissions(CordovaPlugin plugin, int requestCode, String [] permissions) {
         int mappedRequestCode = permissionResultCallbacks.registerCallback(plugin, requestCode);
         getActivity().requestPermissions(permissions, mappedRequestCode);

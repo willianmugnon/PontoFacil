@@ -1,76 +1,70 @@
 <ion-header>
-    <ion-navbar color="primary">
-        <ion-title>
-           Meu Perfil
-        </ion-title>
-<ion-buttons end>
-    <button ion-button icon-only (click)="salvar(perfil)">
+    <ion-navbar>
+        <ion-title> Meu Perfil </ion-title>
+        <ion-buttons end>
+            <button ion-button icon-only (click)="salvar()">
     <ion-icon name="checkmark"></ion-icon>
-    </button>    
-</ion-buttons>
+    </button>
+        </ion-buttons>
     </ion-navbar>
-</ion-header>  
+</ion-header>
 
 
 
 <ion-content padding>
-<div ><img src="{{perfil.foto}}" class="img" (click)="opcoes()"alt=""></div>
+    <div><img src="{{perfil.foto}}" class="img" (click)="opcoes()" alt=""></div>
 
     <ion-list>
         <ion-item>
-            <ion-label floating>Código</ion-label>
-            <ion-input type="text" [(ngModel)]="perfil.codigo" disable="true"></ion-input>
-        </ion-item>
-
-        <ion-item>
             <ion-label floating>Nome</ion-label>
-            <ion-input type="text" [(ngModel)]="perfil.nome"></ion-input>
+            <ion-input type="text" name="nome" [(ngModel)]="perfil.nome" required></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating>E-mail</ion-label>
-            <ion-input type="email"[(ngModel)]="perfil.email"></ion-input>
+            <ion-input type="email" nome="email" [(ngModel)]="perfil.email" required></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating>Login</ion-label>
-            <ion-input type="text"[(ngModel)]="perfil.login"></ion-input>
+            <ion-input type="text" nome="login" [(ngModel)]="perfil.login"  required></ion-input>
         </ion-item>
 
-         <ion-item>
+        <ion-item>
             <ion-label floating>Senha</ion-label>
-            <ion-input type="password"[(ngModel)]="perfil.senha"></ion-input>
+            <ion-input type="password" nome="senha" [(ngModel)]="perfil.senha" required></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating>Celular</ion-label>
-            <ion-input type="text"[(ngModel)]="perfil.celular"></ion-input>
+            <ion-input type="text" nome="celular" [(ngModel)]="perfil.celular" required></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating>Cidade</ion-label>
-            <ion-input type="text"[(ngModel)]="perfil.cidade"></ion-input>
+            <ion-input type="text" nome="cidade" [(ngModel)]="perfil.cidade" required></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating>Cep</ion-label>
-            <ion-input type="text"[(ngModel)]="perfil.cep"></ion-input>
+            <ion-input type="text" nome="cep" [(ngModel)]="perfil.cep" required></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating>Bairro</ion-label>
-            <ion-input type="text"[(ngModel)]="perfil.bairro"></ion-input>
+            <ion-input type="text" nome="bairro" [(ngModel)]="perfil.bairro" required></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating>Rua</ion-label>
-            <ion-input type="text"[(ngModel)]="perfil.rua"></ion-input>
+            <ion-input type="text" nome="rua" [(ngModel)]="perfil.rua" required></ion-input>
         </ion-item>
 
         <ion-item>
             <ion-label floating>Número</ion-label>
-            <ion-input type="text"[(ngModel)]="perfil.numero"></ion-input>
+            <ion-input type="number" nome="numero" [(ngModel)]="perfil.numero" required></ion-input>
         </ion-item>
+
 
     </ion-list>
 

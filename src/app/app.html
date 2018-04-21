@@ -1,15 +1,26 @@
 <ion-menu [content]="content" id="menu-perfil">
   <ion-header class="cabecalho">
     <ion-toolbar color="primary" class="usuario">
-      <img src="{{perfil.foto}}" class="imagem" (click)="abrirPerfil()">
+      <img src="{{perfil.foto}}" class="imagem" menuClose (click)="abrirPerfil()">
       <div class="text">Ponto Fácil</div>
       <div class="text">Willian_mugnon@hotmail.com</div>
     </ion-toolbar>
+    <ion-content>
+      <ion-list inset>
+        <button ion-item *ngFor="let p of pages" menuClose (click)="openPage(p)">
+      {{p.title}}
+    </button>
+      </ion-list>
+    </ion-content>
+
   </ion-header>
-
-
-
-
 </ion-menu>
+
+
+
+
+
+
+
 <!-- Desativar deslize para voltar, porque é mau UX para combinar STGB com menus laterais -->
 <ion-nav [root]="rootPage" #content swipeBackEnabled="false"></ion-nav>

@@ -1,7 +1,6 @@
 .cabecalho {//Quadro onde fica a foto do usuario
     position: absolute;
     height: 25%;
-    background-color: var( --cor-padrao);
 
     .imagem{// Css que faz com que a imagem fique circular, e ajustada no circulo
         margin-top: 30px;
@@ -20,4 +19,5 @@
         color:white;
 
     }
+
 }

@@ -1,4 +1,6 @@
-export class Perfil{
+import { AbstractEntity } from "./abstractentity";
+
+export class Perfil extends AbstractEntity {
     public codigo: number;
     public nome: string;
     public email: string;

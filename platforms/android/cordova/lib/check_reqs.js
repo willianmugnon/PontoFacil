@@ -99,21 +99,8 @@ module.exports.get_gradle_wrapper = function () {
     var i = 0;
     var foundStudio = false;
     var program_dir;
-<<<<<<< HEAD
     // OK, This hack only works on Windows, not on Mac OS or Linux.  We will be deleting this eventually!
     if (module.exports.isWindows()) {
-=======
-    if (module.exports.isDarwin()) {
-        program_dir = fs.readdirSync('/Applications');
-        while (i < program_dir.length && !foundStudio) {
-            if (program_dir[i].startsWith('Android Studio')) {
-                // TODO: Check for a specific Android Studio version, make sure it's not Canary
-                androidStudioPath = path.join('/Applications', program_dir[i], 'Contents', 'gradle');
-                foundStudio = true;
-            } else { ++i; }
-        }
-    } else if (module.exports.isWindows()) {
->>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
 
         var result = child_process.spawnSync(path.join(__dirname, 'getASPath.bat'));
         // console.log('result.stdout =' + result.stdout.toString());
@@ -181,11 +168,7 @@ module.exports.check_java = function () {
             if (javacPath) {
                 // OS X has a command for finding JAVA_HOME.
                 var find_java = '/usr/libexec/java_home';
-<<<<<<< HEAD
                 var default_java_error_msg = 'Failed to find \'JAVA_HOME\' environment variable. Try setting it manually.';
-=======
-                var default_java_error_msg = 'Failed to find \'JAVA_HOME\' environment variable. Try setting setting it manually.';
->>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
                 if (fs.existsSync(find_java)) {
                     return superspawn.spawn(find_java).then(function (stdout) {
                         process.env['JAVA_HOME'] = stdout.trim();
@@ -290,11 +273,7 @@ module.exports.check_android = function () {
                 if (path.basename(parentDir) === 'tools' || fs.existsSync(path.join(grandParentDir, 'tools', 'android'))) {
                     maybeSetAndroidHome(grandParentDir);
                 } else {
-<<<<<<< HEAD
                     throw new CordovaError('Failed to find \'ANDROID_HOME\' environment variable. Try setting it manually.\n' +
-=======
-                    throw new CordovaError('Failed to find \'ANDROID_HOME\' environment variable. Try setting setting it manually.\n' +
->>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
                         'Detected \'android\' command at ' + parentDir + ' but no \'tools\' directory found near.\n' +
                         'Try reinstall Android SDK or update your PATH to include valid path to SDK' + path.sep + 'tools directory.');
                 }
@@ -305,11 +284,7 @@ module.exports.check_android = function () {
                 if (path.basename(parentDir) === 'platform-tools') {
                     maybeSetAndroidHome(grandParentDir);
                 } else {
-<<<<<<< HEAD
                     throw new CordovaError('Failed to find \'ANDROID_HOME\' environment variable. Try setting it manually.\n' +
-=======
-                    throw new CordovaError('Failed to find \'ANDROID_HOME\' environment variable. Try setting setting it manually.\n' +
->>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
                         'Detected \'adb\' command at ' + parentDir + ' but no \'platform-tools\' directory found near.\n' +
                         'Try reinstall Android SDK or update your PATH to include valid path to SDK' + path.sep + 'platform-tools directory.');
                 }
@@ -320,22 +295,14 @@ module.exports.check_android = function () {
                 if (path.basename(parentDir) === 'bin' && path.basename(grandParentDir) === 'tools') {
                     maybeSetAndroidHome(path.dirname(grandParentDir));
                 } else {
-<<<<<<< HEAD
                     throw new CordovaError('Failed to find \'ANDROID_HOME\' environment variable. Try setting it manually.\n' +
-=======
-                    throw new CordovaError('Failed to find \'ANDROID_HOME\' environment variable. Try setting setting it manually.\n' +
->>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
                         'Detected \'avdmanager\' command at ' + parentDir + ' but no \'tools' + path.sep + 'bin\' directory found near.\n' +
                         'Try reinstall Android SDK or update your PATH to include valid path to SDK' + path.sep + 'tools' + path.sep + 'bin directory.');
                 }
             }
         }
         if (!process.env['ANDROID_HOME']) {
-<<<<<<< HEAD
             throw new CordovaError('Failed to find \'ANDROID_HOME\' environment variable. Try setting it manually.\n' +
-=======
-            throw new CordovaError('Failed to find \'ANDROID_HOME\' environment variable. Try setting setting it manually.\n' +
->>>>>>> 1495c85eeabdb6bb12301ea901f566a164d0f626
                 'Failed to find \'android\' command in your \'PATH\'. Try update your \'PATH\' to include path to valid SDK directory.');
         }
         if (!fs.existsSync(process.env['ANDROID_HOME'])) {

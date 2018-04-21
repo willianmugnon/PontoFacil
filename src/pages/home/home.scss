@@ -1,2 +1,22 @@
 page-home {
+    .toolbar-background-md  {
+        background: linear-gradient(0deg, #0D8EAA, #00FF98);
+    }
+    .bar-button-default-md{
+        color: #ffffff
+    }
+    .toolbar-title-md{
+        color: #ffffff
+    }
+
+    #map {
+        position: absolute;
+        overflow: hidden;
+        width: 100%;
+        height: 100%;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+    }
 }
